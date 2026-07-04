@@ -8,7 +8,7 @@ version = "0.1.0"
 authors = [
     { name="Rajesh Dunga" },
 ]
-description = "Opinionated worklog management tool for developers."
+description = "A lightweight, local-first CLI for recording daily activities."
 readme = "README.md"
 requires-python = ">=3.12"
 classifiers = [
@@ -28,7 +28,8 @@ dev = [
 
 [project.urls]
 Homepage = "https://github.com/rdunga/daycrumbs"
-
+Repository = "https://github.com/rdunga/daycrumbs"
+Issues = "https://github.com/rdunga/daycrumbs/issues"
 
 [project.scripts]
 daycrumbs = "daycrumbs.cli:app"

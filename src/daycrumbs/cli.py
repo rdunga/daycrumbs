@@ -25,7 +25,8 @@ def add(notes: Annotated[list[str], typer.Argument()],
    # typer.echo(f"Activity added: {activity.notes}, timestamp: {activity.timestamp}, Bucket: {activity.bucket}, Duration: {activity.duration_mins} mins")
 
     storage = Storage()
-    typer.echo(f"Storing activity in: {storage.app_data_dir}")
+    #typer.echo(f"Storing activity in: {storage.app_data_dir}")
+    typer.echo(f"Noted! Your activity has been recorded.")
     storage.append_activity(activity)
 
 @app.command()
@@ -60,6 +61,23 @@ def view(date: Annotated[str, typer.Argument(help="Date in YYYY-MM-DD format")] 
         typer.echo(f"{time_text}  {wrapped_notes[0]}")
         for line in wrapped_notes[1:]:
             typer.echo(f"{' ' * 10}{line}") 
+        
+        metadata = []
+
+        if activity.get("bucket"):
+            metadata.append(activity["bucket"])
+
+        if activity.get("duration_mins"):
+            metadata.append(
+                f"{activity['duration_mins']} min"
+            )
+
+        if metadata:
+            typer.echo(
+                f"{'':9}  {' · '.join(metadata)}"
+            )
+        
+        typer.echo()
 
 if __name__ == "__main__":
     app()

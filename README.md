@@ -87,9 +87,46 @@ You can:
 
 ## Installation
 
-```bash
-pip install daycrumbs
+## Installation
+
+DayCrumbs is a command-line application. The recommended way to install it is with `pipx`, which installs Python CLI tools in isolated environments while making their commands available from your terminal.
+
+### Install pipx
+
+If you do not already have `pipx`, follow the installation instructions for your operating system:
+
+* [pipx installation guide](https://pipx.pypa.io/stable/installation/)
+
+On Windows, you can install it with:
+
+```powershell
+py -m pip install --user pipx
+py -m pipx ensurepath
 ```
+
+After running `ensurepath`, close and reopen your terminal.
+
+On macOS with Homebrew:
+
+```bash
+brew install pipx
+pipx ensurepath
+```
+
+### Install DayCrumbs
+
+```bash
+pipx install daycrumbs
+```
+
+Verify the installation:
+
+```bash
+daycrumbs --help
+```
+
+You can now use `daycrumbs` from any terminal without activating a virtual environment.
+
 
 ---
 

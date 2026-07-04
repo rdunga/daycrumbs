@@ -1,7 +1,7 @@
 from datetime import datetime
 import typer
-from worklog.activity import Activity
-from worklog.storage import Storage
+from daycrumbs.activity import Activity
+from daycrumbs.storage import Storage
 from typing import Annotated
 
 app = typer.Typer()
@@ -11,7 +11,7 @@ def add(notes: Annotated[str, typer.Argument()],
         bucket: Annotated[str, typer.Option("--bucket", help="Optional bucket/category for the activity")] = None, 
         duration: Annotated[int, typer.Option("--duration", help="Duration of the activity in minutes")] = None):
     """
-    Add a new activity to the worklog.
+    Add a new activity to the daycrumbs.
     """
     typer.echo("Adding a new activity...")
     activity = Activity(

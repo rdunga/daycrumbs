@@ -1,5 +1,5 @@
 from datetime import datetime
-from worklog.activity import Activity
+from daycrumbs.activity import Activity
 
 def test_activity_creation():
     activity = Activity(

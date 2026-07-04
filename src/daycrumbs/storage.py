@@ -24,7 +24,7 @@ class Storage:
         """
         Returns the directory path for storing activities.
         """
-        path = Path(user_data_dir("worklog"))
+        path = Path(user_data_dir("daycrumbs"))
         path.mkdir(parents=True, exist_ok=True)
         return path
     

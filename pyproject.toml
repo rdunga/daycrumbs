@@ -16,7 +16,10 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dependencies = ["typer>=0.26.8"]
+dependencies = [
+    "typer>=0.26.8",
+    "platformdirs>=4.10.0",
+]
 
 [project.optional-dependencies]
 dev = [

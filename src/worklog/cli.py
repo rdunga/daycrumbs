@@ -1,6 +1,7 @@
 from datetime import datetime
 import typer
 from worklog.activity import Activity
+from worklog.storage import Storage
 from typing import Annotated
 
 app = typer.Typer()
@@ -20,6 +21,10 @@ def add(notes: Annotated[str, typer.Argument()],
         duration_mins=duration
     )
     typer.echo(f"Activity added: {activity.notes}, timestamp: {activity.timestamp}, Bucket: {activity.bucket}, Duration: {activity.duration_mins} mins")
+
+    storage = Storage()
+    typer.echo(f"Storing activity in: {storage.app_data_dir}")
+    storage.append_activity(activity)
 
 if __name__ == "__main__":
     app()

@@ -100,7 +100,7 @@ pip install daycrumbs
 ```bash
 daycrumbs add Review PR from team
 ```
-![alt text](image-1.png)
+![alt text](assets/images/image-1.png)
 
 You do not need quotes around the note. Everything after `add` is treated as the activity note.
 
@@ -109,7 +109,7 @@ You do not need quotes around the note. Everything after `add` is treated as the
 ```bash
 daycrumbs add Updated onboarding doc with detailed steps --bucket personal
 ```
-![alt text](image-2.png)
+![alt text](assets/images/image-2.png)
 
 Buckets are optional labels to loosely categorize activities.
 
@@ -118,7 +118,7 @@ Buckets are optional labels to loosely categorize activities.
 ```bash
 daycrumbs add Reviewed test suite failures after deployment --duration 30
 ```
-![alt text](image-3.png)
+![alt text](assets/images/image-3.png)
 
 Duration is in minutes. You can combine bucket and duration:
 
@@ -131,14 +131,14 @@ daycrumbs add Call with team on finalizing the design --bucket work --duration 4
 ```bash
 daycrumbs view
 ```
-![alt text](image-7.png)
+![alt text](assets/images/image-7.png)
 
 ### View activities for a specific date
 
 ```bash
 daycrumbs view 2026-07-04
 ```
-![alt text](image-8.png)
+![alt text](assets/images/image-8.png)
 
 
 Dates use the `YYYY-MM-DD` format.

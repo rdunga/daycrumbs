@@ -98,29 +98,32 @@ pip install daycrumbs
 ### Add an activity
 
 ```bash
-daycrumbs add Investigated batch processing issue
+daycrumbs add Review PR from team
 ```
+![alt text](image-1.png)
 
 You do not need quotes around the note. Everything after `add` is treated as the activity note.
 
 ### Add a bucket
 
 ```bash
-daycrumbs add Investigated batch processing issue --bucket work
+daycrumbs add Updated onboarding doc with detailed steps --bucket personal
 ```
+![alt text](image-2.png)
 
 Buckets are optional labels to loosely categorize activities.
 
 ### Add duration
 
 ```bash
-daycrumbs add Investigated batch processing issue --duration 45
+daycrumbs add Reviewed test suite failures after deployment --duration 30
 ```
+![alt text](image-3.png)
 
 Duration is in minutes. You can combine bucket and duration:
 
 ```bash
-daycrumbs add Investigated renewal processing issue --bucket work --duration 45
+daycrumbs add Call with team on finalizing the design --bucket work --duration 45
 ```
 
 ### View today's activities
@@ -128,12 +131,15 @@ daycrumbs add Investigated renewal processing issue --bucket work --duration 45
 ```bash
 daycrumbs view
 ```
+![alt text](image-7.png)
 
 ### View activities for a specific date
 
 ```bash
 daycrumbs view 2026-07-04
 ```
+![alt text](image-8.png)
+
 
 Dates use the `YYYY-MM-DD` format.
 
